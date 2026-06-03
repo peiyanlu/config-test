@@ -1,0 +1,84 @@
+{
+  "name": "config-test",
+  "productName": "SVGoify",
+  "version": "1.0.5",
+  "description": "SVG Optimize Application",
+  "license": "MIT",
+  "type": "commonjs",
+  "main": ".vite/build/main.js",
+  "scripts": {
+    "dev": "electron-forge start",
+    "build": "electron-forge make",
+    "dev:chcp:win": "chcp 65001 && electron-forge start",
+    "build:debug:win": "set DEBUG=electron-packager && electron-forge make"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.11.2",
+    "@electron-forge/maker-deb": "^7.11.2",
+    "@electron-forge/maker-dmg": "^7.11.2",
+    "@electron-forge/maker-msix": "^7.11.2",
+    "@electron-forge/maker-rpm": "^7.11.2",
+    "@electron-forge/maker-squirrel": "^7.11.2",
+    "@electron-forge/maker-zip": "^7.11.2",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.11.2",
+    "@electron-forge/plugin-fuses": "^7.11.2",
+    "@electron-forge/plugin-vite": "^7.11.2",
+    "@electron-forge/publisher-github": "^7.11.2",
+    "@electron-forge/shared-types": "^7.11.2",
+    "@electron/fuses": "^2.1.1",
+    "@varlet/import-resolver": "^3.17.1",
+    "@varlet/touch-emulator": "^3.17.1",
+    "@vitejs/plugin-vue": "^6.0.7",
+    "electron": "^42.3.0",
+    "typescript": "^6.0.3",
+    "unplugin-auto-import": "^21.0.0",
+    "unplugin-vue-components": "^32.1.0",
+    "vite": "^7.3.2",
+    "vite-plugin-html": "^3.2.2",
+    "@types/node": "^24.12.2"
+  },
+  "dependencies": {
+    "@peiyanlu/electron": "^1.0.11",
+    "@peiyanlu/ts-utils": "^0.0.5",
+    "@varlet/ui": "^3.17.1",
+    "@vueuse/components": "^14.3.0",
+    "@vueuse/core": "^14.3.0",
+    "highlight.js": "^11.11.1",
+    "jszip": "^3.10.1",
+    "svgo": "^4.0.1",
+    "svgpath": "^2.6.0",
+    "tinyglobby": "^0.2.17",
+    "vue": "^3.5.35",
+    "vue-router": "^5.1.0"
+  },
+  "keywords": [
+    "electron",
+    "svg",
+    "icon"
+  ],
+  "author": {
+    "name": "YanluPei",
+    "email": "peiyanlu@vip.qq.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peiyanlu/config-test.git"
+  },
+  "bugs": {
+    "url": "https://github.com/peiyanlu/config-test/issues",
+    "email": "peiyanlu@vip.qq.com"
+  },
+  "homepage": "https://github.com/peiyanlu/config-test#readme",
+  "os": [
+    "win32",
+    "darwin",
+    "linux"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ],
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}
