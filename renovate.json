@@ -1,42 +1,53 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended"],
-  "automergeStrategy": "squash",
-  "rangeStrategy": "bump",
-  "timezone": "Asia/Shanghai",
-  "labels": ["deps"],
-  "minimumReleaseAge": "3 days",
-  "schedule": [
-    "* 0-3 1 * *",
-    "* 0-3 16 * *"
+  "extends": [
+    "config:base",
+    "schedule:weekly",
+    "group:allNonMajor"
   ],
-  "commitMessageAction": "升级",
-  "commitMessageTopic": "{{depName}}",
-  "commitMessageExtra": "至 {{newVersion}}",
+  "automerge": true,
+  "automergeType": "pr",
+  "automergeStrategy": "rebase",
+  "timezone": "Asia/Shanghai",
+  "labels": ["dependencies"],
+  "ignorePaths": [
+    "**/test/**",
+    "**/*-lock.*"
+  ],
+  "prConcurrentLimit": 0,
+  "prHourlyLimit": 0,
+  "rangeStrategy": "bump",
   "packageRules": [
     {
-      "matchManagers": ["npm"],
-      "matchDepTypes": ["dependencies", "devDependencies"],
+      "matchDepTypes": ["devDependencies"],
+      "labels": ["devDeps"]
+    },
+    {
+      "matchDepTypes": ["peerDependencies"],
+      "enabled": false
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "labels": ["major"],
+      "automerge": false
+    },
+    {
+      "matchDepNames": [],
+      "enabled": false
+    },
+    {
+      "matchManagers": ["github-actions"],
       "matchUpdateTypes": ["minor", "patch"],
-      "groupName": "npm 依赖",
-      "groupSlug": "npm",
+      "groupName": "github-actions-minor-patch",
+      "labels": ["github-actions", "minor-patch"],
       "automerge": true
     },
     {
       "matchManagers": ["github-actions"],
-      "groupName": "ci 依赖",
-      "groupSlug": "ci",
+      "matchUpdateTypes": ["major"],
+      "groupName": "github-actions-major",
+      "labels": ["github-actions", "major"],
       "automerge": true
-    },
-    {
-      "matchManagers": ["github-actions"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "enabled": false
-    },
-    {
-      "matchDepTypes": ["engines"],
-      "matchDepNames": ["node"],
-      "enabled": false
     },
     {
       "matchPackageNames": ["@types/node", "typescript", "vite"],
