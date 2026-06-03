@@ -19,37 +19,6 @@
   "rangeStrategy": "bump",
   "packageRules": [
     {
-      "matchDepTypes": ["devDependencies"],
-      "labels": ["devDeps"]
-    },
-    {
-      "matchDepTypes": ["peerDependencies"],
-      "enabled": false
-    },
-    {
-      "matchUpdateTypes": ["major"],
-      "labels": ["major"],
-      "automerge": false
-    },
-    {
-      "matchDepNames": [],
-      "enabled": false
-    },
-    {
-      "matchManagers": ["github-actions"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "groupName": "github-actions-minor-patch",
-      "labels": ["github-actions", "minor-patch"],
-      "automerge": true
-    },
-    {
-      "matchManagers": ["github-actions"],
-      "matchUpdateTypes": ["major"],
-      "groupName": "github-actions-major",
-      "labels": ["github-actions", "major"],
-      "automerge": true
-    },
-    {
       "matchPackageNames": ["@types/node", "typescript", "vite", "node"],
       "enabled": false
     }
