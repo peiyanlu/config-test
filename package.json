@@ -1,0 +1,28 @@
+{
+  "name": "config-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.5.1",
+      "onFail": "download"
+    }
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com:peiyanlu/config-test.git"
+  },
+  "homepage": "https://github.com/peiyanlu/config-test",
+  "bugs": {
+    "url": "https://github.com/peiyanlu/config-test/issues"
+  }
+}
