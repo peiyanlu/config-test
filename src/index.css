@@ -1,0 +1,82 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  
+  color-scheme: light dark;
+  color: rgba(var(--primary-color), 1);
+  background-color: rgba(var(--primary-background-color), 1);
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  
+  --scrollbar-width: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  
+  &::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+    height: var(--scrollbar-width);
+    background-color: transparent;
+  }
+  
+  &::-webkit-scrollbar-track {
+    border-radius: calc(var(--scrollbar-width) / 2);
+    background-color: rgba(var(--primary-background-color), 1);
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    border-radius: var(--scrollbar-width);
+    background-color: rgba(var(--primary-color), .35);
+  }
+  
+  &::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}
+
+html, body, #app {
+  width: 100%;
+  height: 100%;
+  text-autospace: normal;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary-color: 33, 53, 71;
+    --primary-background-color: 254, 247, 255;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: 231, 225, 234;
+    --primary-background-color: 20, 18, 24;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --drop-bg: rgba(80, 140, 255, 0.05);
+    --drop-highlight: rgba(255, 255, 255, 0.8);
+    --drop-shadow: rgba(0, 0, 0, 0.25);
+    --drop-glow: rgba(80, 140, 255, 0.5);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --drop-bg: rgba(80, 140, 255, 0.08);
+    --drop-highlight: rgba(255, 255, 255, 0.16);
+    --drop-shadow: rgba(0, 0, 0, 0.36);
+    --drop-glow: rgba(80, 140, 255, 0.5);
+  }
+}
