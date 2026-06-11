@@ -17,7 +17,10 @@ const iconResDir = 'resources/icons'
 const joinPath = (...paths: string[]) => join(__dirname, iconResDir, ...paths)
 
 const productName = pkg.productName.replace(/\s+/g, '-')
-const executableName = isLinux ? pkg.productName.toLowerCase() : productName
+// const executableName = isLinux ? pkg.productName.toLowerCase() : productName
+
+const executableName = isLinux ? pkg.productName.toLowerCase() : undefined
+
 
 export default {
   packagerConfig: {
@@ -43,16 +46,16 @@ export default {
     new MakerRpm({
       options: {
         icon: joinPath('icon.png'),
-        bin: executableName,
-        productName: pkg.productName,
+        // bin: executableName,
+        // productName: pkg.productName,
       },
     }),
     // Linux debian，ubuntu
     new MakerDeb({
       options: {
         icon: joinPath('icon.png'),
-        bin: executableName,
-        productName: pkg.productName,
+        // bin: executableName,
+        // productName: pkg.productName,
       },
     }),
   ],
