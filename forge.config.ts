@@ -46,7 +46,7 @@ export default {
     new MakerRpm({
       options: {
         icon: joinPath('icon.png'),
-        // bin: executableName,
+        bin: executableName,
         // productName: pkg.productName,
       },
     }),
@@ -54,7 +54,7 @@ export default {
     new MakerDeb({
       options: {
         icon: joinPath('icon.png'),
-        // bin: executableName,
+        bin: executableName,
         // productName: pkg.productName,
       },
     }),
