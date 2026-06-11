@@ -1,5 +1,5 @@
 {
-  "name": "finance-assistant",
+  "name": "config-test",
   "productName": "FinanceDoc Assistant",
   "version": "0.0.2",
   "description": "Search & Extract Financial Documents.",
@@ -64,13 +64,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/peiyanlu/finance-assistant.git"
+    "url": "https://github.com/peiyanlu/config-test.git"
   },
   "bugs": {
-    "url": "https://github.com/peiyanlu/finance-assistant/issues",
+    "url": "https://github.com/peiyanlu/config-test/issues",
     "email": "peiyanlu@vip.qq.com"
   },
-  "homepage": "https://github.com/peiyanlu/finance-assistant#readme",
+  "homepage": "https://github.com/peiyanlu/config-test#readme",
   "os": [
     "win32",
     "darwin",

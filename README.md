@@ -1,4 +1,4 @@
-# finance-assistant
+# config-test
 
 Search & Extract Financial Documents.
 

@@ -90,7 +90,7 @@ ElectronHost.openMainWindow({
 
 if (!isDev) {
   checkUpdate({
-    repo: 'peiyanlu/finance-assistant',
+    repo: 'peiyanlu/config-test',
     onNotifyUser: async ({ done }) => {
       const { response } = await dialog.showMessageBox({
         icon: trayIcon,
