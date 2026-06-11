@@ -94,7 +94,7 @@ export default {
       config: {
         repository: {
           owner: 'peiyanlu',
-          name: 'finance-assistant',
+          name: 'config-test',
         },
         draft: false,
         prerelease: false,
