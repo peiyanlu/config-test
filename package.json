@@ -3,6 +3,7 @@
   "productName": "Finance Doc Assistant",
   "version": "0.0.8",
   "description": "Search & Extract Financial Documents.",
+  "private": true,
   "license": "MIT",
   "main": ".vite/build/main.js",
   "scripts": {
@@ -37,6 +38,7 @@
   },
   "dependencies": {
     "@peiyanlu/electron": "^1.0.12",
+    "@peiyanlu/release": "^0.0.12",
     "@peiyanlu/ts-utils": "^0.0.5",
     "@varlet/ui": "^3.17.1",
     "@vueuse/components": "^14.3.0",
