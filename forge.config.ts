@@ -17,13 +17,14 @@ const iconResDir = 'resources/icons'
 const joinPath = (...paths: string[]) => join(__dirname, iconResDir, ...paths)
 
 const productName = pkg.productName.replace(/\s+/g, '-')
+const executableName = isLinux ? productName.toLowerCase() : productName
 
 export default {
   packagerConfig: {
     asar: true,
     icon: joinPath('icon'),
     name: pkg.name,
-    executableName: isLinux ? productName.toLowerCase() : productName,
+    executableName,
     extraResource: [
       iconResDir,
     ],
@@ -49,6 +50,7 @@ export default {
     new MakerDeb({
       options: {
         icon: joinPath('icon.png'),
+        bin: executableName
       },
     }),
   ],
