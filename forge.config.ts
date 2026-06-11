@@ -17,7 +17,7 @@ const iconResDir = 'resources/icons'
 const joinPath = (...paths: string[]) => join(__dirname, iconResDir, ...paths)
 
 const productName = pkg.productName.replace(/\s+/g, '-')
-const executableName = isLinux ? productName.toLowerCase() : productName
+const executableName = isLinux ? pkg.productName.toLowerCase() : productName
 
 export default {
   packagerConfig: {
