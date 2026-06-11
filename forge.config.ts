@@ -26,7 +26,7 @@ export default {
   packagerConfig: {
     asar: true,
     icon: joinPath('icon'),
-    executableName,
+    executableName: pkg.productName,
     extraResource: [
       iconResDir,
     ],
