@@ -16,9 +16,6 @@ const iconResDir = 'resources/icons'
 
 const joinPath = (...paths: string[]) => join(__dirname, iconResDir, ...paths)
 
-const productName = pkg.productName.replace(/\s+/g, '-')
-// const executableName = isLinux ? pkg.productName.toLowerCase() : productName
-
 const executableName = isLinux ? pkg.productName.toLowerCase() : undefined
 
 
@@ -26,7 +23,7 @@ export default {
   packagerConfig: {
     asar: true,
     icon: joinPath('icon'),
-    executableName: pkg.productName.toLowerCase(),
+    executableName,
     extraResource: [
       iconResDir,
     ],
@@ -47,7 +44,6 @@ export default {
       options: {
         icon: joinPath('icon.png'),
         bin: executableName,
-        // productName: pkg.productName,
       },
     }),
     // Linux debian，ubuntu
@@ -55,7 +51,6 @@ export default {
       options: {
         icon: joinPath('icon.png'),
         bin: executableName,
-        // productName: pkg.productName,
       },
     }),
   ],
