@@ -43,14 +43,16 @@ export default {
     new MakerRpm({
       options: {
         icon: joinPath('icon.png'),
-        bin: executableName
+        bin: executableName,
+        productName: pkg.productName,
       },
     }),
     // Linux debian，ubuntu
     new MakerDeb({
       options: {
         icon: joinPath('icon.png'),
-        bin: executableName
+        bin: executableName,
+        productName: pkg.productName,
       },
     }),
   ],
@@ -92,7 +94,7 @@ export default {
       config: {
         repository: {
           owner: 'peiyanlu',
-          name: 'config-test',
+          name: 'finance-assistant',
         },
         draft: false,
         prerelease: false,
