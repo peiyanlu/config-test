@@ -44,6 +44,7 @@ export default {
     new MakerRpm({
       options: {
         icon: joinPath('icon.png'),
+        bin: executableName
       },
     }),
     // Linux debian，ubuntu
