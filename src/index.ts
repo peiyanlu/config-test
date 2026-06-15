@@ -65,3 +65,4 @@ await generateChangelog({
 
 //git commit -qm "feat: second" --allow-empty
 //git commit -qm "feat: third" --allow-empty
+//git commit -qm "feat: four" --allow-empty
