@@ -1,3 +1,9 @@
+## [1.0.3](https://github.com/peiyanlu/config-test/compare/v1.0.2...v1.0.3) (2026-06-15)
+
+### Features
+
+* third ([e250fbe](https://github.com/peiyanlu/config-test/commit/e250fbe91c6794099f50879d0e56075031217991))
+
 ## [1.0.2](https://github.com/peiyanlu/config-test/compare/v1.0.1...v1.0.2) (2026-06-15)
 
 ### Features
