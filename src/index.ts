@@ -62,3 +62,5 @@ export const generateChangelog = async ({ getPkgDir, tagPrefix, releaseCount = 1
 await generateChangelog({
   getPkgDir: () => '.',
 })
+
+//git commit -qm "feat: second" --allow-empty
