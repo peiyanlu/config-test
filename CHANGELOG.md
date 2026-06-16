@@ -1,3 +1,9 @@
+## [1.0.5](https://github.com/peiyanlu/config-test/compare/v1.0.4...v1.0.5) (2026-06-16)
+
+### Features
+
+* fifth ([809d0ff](https://github.com/peiyanlu/config-test/commit/809d0ff1748ab7048583f6b594e4c065ccaa40d6))
+
 ## [1.0.4](https://github.com/peiyanlu/config-test/compare/v1.0.3...v1.0.4) (2026-06-16)
 
 ### Features
