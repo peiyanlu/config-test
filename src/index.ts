@@ -4,8 +4,10 @@ import { createWriteStream, existsSync, readFileSync } from 'node:fs'
 import { writeFile } from 'node:fs/promises'
 import { EOL } from 'node:os'
 import { join } from 'node:path'
+import * as process from 'node:process'
 import { finished } from 'node:stream/promises'
 
+const argv = process.argv.slice(2).map(Number)
 
 interface GenerateOptions {
   /** @example () => `packages/${pkg}` */
@@ -61,6 +63,7 @@ export const generateChangelog = async ({ getPkgDir, tagPrefix, releaseCount = 1
 
 await generateChangelog({
   getPkgDir: () => '.',
+  releaseCount: argv[0] ?? 1,
 })
 
 //git commit -qm "feat: second" --allow-empty
